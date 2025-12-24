@@ -9,22 +9,23 @@
 body {
   margin: 0;
   background: #ffffff;
+  font-family: Arial, sans-serif;
 }
+
 .container {
   max-width: 1200px;
   margin: auto;
 }
+
+/* تحسين تحميل الصور */
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   display: block;
+  background: #f2f2f2; /* يمنع الوميض أثناء التحميل */
 }
-.footer {
-  background: #f57c00;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-}
+
+/* زر الاتصال */
 .call {
   position: fixed;
   bottom: 15px;
@@ -35,6 +36,7 @@ img {
   border-radius: 30px;
   text-decoration: none;
   font-size: 14px;
+  z-index: 1000;
 }
 </style>
 </head>
@@ -42,8 +44,23 @@ img {
 <body>
 
 <div class="container">
-  <img src="images/poster-hearing.jpg" alt="إدراك للسمعيات">
-  <img src="images/poster-services.jpg" alt="خدمات إدراك للسمعيات">
+
+  <img 
+    src="images/poster-hearing.jpg"
+    alt="إدراك للسمعيات"
+    loading="lazy"
+    width="1200"
+    height="800"
+  >
+
+  <img 
+    src="images/poster-services.jpg"
+    alt="خدمات إدراك للسمعيات"
+    loading="lazy"
+    width="1200"
+    height="800"
+  >
+
 </div>
 
 <a class="call" href="tel:+967777429365">
